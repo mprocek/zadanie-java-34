@@ -18,7 +18,7 @@ public class DirectionTest {
 
         System.out.println("Podaj numer: ");
         int num = scan.nextInt();
-        System.out.println("Wybrałeś kierunek " + convert(num));
+        System.out.println("Wybrałeś kierunek " + convert2(num,direction));
 
     }
 
@@ -44,4 +44,11 @@ public class DirectionTest {
         return numToString;
     }
 
+    public static String convert2(int num, Direction[] direction){
+        if(num<direction.length){
+            return direction[num].getNameDirection();
+        } else {
+            return direction[direction.length-1].getNameDirection();
+        }
+    }
 }
